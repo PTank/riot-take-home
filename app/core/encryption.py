@@ -21,18 +21,12 @@ class Base64Encrypter(Encrypter):
             return value
 
 
-...
-
-
 class EncrypterFactory:
     encrypters: dict[str, type[Encrypter]] = {"base64": Base64Encrypter}
 
     @staticmethod
     def build(encryption_type: str, config: EncryptionConfig) -> Encrypter:
         return EncrypterFactory.encrypters[encryption_type](config)
-
-
-...
 
 
 class EncryptionService:
