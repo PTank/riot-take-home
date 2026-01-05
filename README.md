@@ -22,7 +22,15 @@ To run the application using Podman Compose or Docker Compose:
 podman compose up --build
 ```
 
+Or with `python` if setup is done.
+
+```bash
+uv run python main.py
+```
+
 The application should then be accessible at `http://localhost:8000` (or the port specified in `docker-compose.yml`).
+
+And the swagger: `http://localhost:8000/docs`.
 
 
 ## Env Variables
